@@ -6,7 +6,7 @@
 #include "GameFramework/PlayerController.h"
 #include "AuraPlayerController.generated.h"
 
-class IEnemyInterface
+class IEnemyInterface;
 
 /**
  * 
