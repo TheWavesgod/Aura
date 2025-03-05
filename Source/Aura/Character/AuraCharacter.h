@@ -20,6 +20,10 @@ public:
 	virtual void PossessedBy(AController* NewController) override;
 	virtual void OnRep_PlayerState() override;
 	
+	/** Combat Interface **/
+	virtual int32 GetPlayerLevel() const override;
+	/** End Combat Interface **/
+	
 protected:
 	UPROPERTY(EditAnywhere, Category="Camera")
 	TObjectPtr<class USpringArmComponent> SpringArm;
@@ -28,5 +32,5 @@ protected:
 	TObjectPtr<class UCameraComponent> Camera;
 
 private:
-	void InitAbilityActorInfo();
+	virtual void InitAbilityActorInfo() override;
 };
