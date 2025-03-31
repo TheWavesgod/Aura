@@ -35,7 +35,14 @@ private:
 	UPROPERTY(EditAnywhere, Category="Input")
 	TObjectPtr<class UInputAction> MoveAction;
 	
+	UPROPERTY(EditAnywhere, Category="Input")
+	TObjectPtr<class UInputAction> ShiftAction;
+	
 	void Move(const struct FInputActionValue& InputActionValue);
+
+	void ShiftPressed()	{ bShiftKeyDown = true; }
+	void ShiftReleased() { bShiftKeyDown = false; }
+	bool bShiftKeyDown = false;
 
 	void CursorTrace();
 	TScriptInterface<IEnemyInterface> LastActor;
